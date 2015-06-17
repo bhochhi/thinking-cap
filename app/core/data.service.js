@@ -10,7 +10,9 @@
     /* @ngInject */
     function dataservice($http, $q) {
 
-        var service = {};
+        var service = {
+          getTrends: getTrends
+        };
 
         return service;
 
@@ -21,6 +23,9 @@
         function fail(error, type) {
             var msg = 'query for ' + type + ' failed. ' + error.data.description;
             return $q.reject(msg);
+        }
+
+        function getTrends(){
         }
     }
 })();

@@ -8,18 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kylebradshaw/ngCountriesCapitals.git"
+    "url": "https://github.com/kylebradshaw/thinking-cap.git"
   },
-  "author": "",
+  "author": "Kyle Bradshaw <kyle.bradshaw@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kylebradshaw/ngCountriesCapitals/issues"
-  },
-  "homepage": "https://github.com/kylebradshaw/ngCountriesCapitals",
+  "homepage": "https://github.com/kylebradshaw/thinking-cap",
   "dependencies": {
     "gulp": "^3.8.11",
     "gulp-clean": "^0.3.1",
-    "gulp-connect": "^2.2.0"
+    "gulp-connect": "^2.2.0",
+    "twitter-api-node-express": "git+https://github.com/kylebradshaw/Twitter-API-with-Node-and-Express.git"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^2.2.0",
