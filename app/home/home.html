@@ -1,1 +1,60 @@
 <p>{{content}}</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="text-center">Twitter API with Javascript (node/express)</h1>
+    </div>
+  </div>
+  <div class="row" style="margin-top:50px;">
+    <div class="col-xs-12">
+      <input class="form-control" type="text" placeholder="Twitter User Name (e.g. BoyCook)" ng-model="userName">
+      <br>
+      <br>
+      <p class="text-center"><button class="btn btn-primary" ng-click="getUser(userName)">Get User</button></p>
+    </div>
+  </div>
+  <div class="row" ng-if="twitterErrors">
+    <div class="col-xs-12">
+      <div class="alert alert-danger">
+        {{twitterErrors}}
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:50px;" ng-if="results">
+    <div class="col-xs-12">
+      <p class="text-center"><img ng-src="{{results.profile_image_url}}"></p>
+      <table class="table table-bordered">
+        <tr ng-repeat="(key, value) in results">
+          <td>
+            {{key}}
+          </td>
+          <td>
+            {{value}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" ng-if="trends">
+      <table class="table table-bordered">
+        <tr ng-repeat="(key, value) in trends[0].trends">
+          <td>
+            {{key}}
+          </td>
+          <td>
+            {{value}}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-xs-12">
+      <p class="text-center">
+        <button class="btn btn-primary" ng-click="getTrends()">Get Trends</button>
+      </p>
+    </div>
+  </div>
+
+</div>
+
