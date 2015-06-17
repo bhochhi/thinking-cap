@@ -7,8 +7,8 @@
         .factory('TwitterService', TwitterService)
         .constant('API_ROOT', 'http://localhost:3000');
 
-    HomeController.$inject = ['$scope'];
     TwitterService.$inject = ['$http', '$q', 'API_ROOT'];
+    HomeController.$inject = ['$scope', 'TwitterService'];
 
     function HomeController($scope, TwitterService) {
         $scope.pageClass = "home";
